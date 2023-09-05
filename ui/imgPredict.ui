@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImgPredict</class>
+ <widget class="QDialog" name="ImgPredict">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1221</width>
+    <height>617</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>2</y>
+     <width>1218</width>
+     <height>612</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0,0">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="h1" stretch="2,2,2,2,1,1,1,1">
+      <item>
+       <widget class="QPushButton" name="img_clip_btn">
+        <property name="text">
+         <string>图像裁剪</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="img_reset_btn">
+        <property name="text">
+         <string>撤销裁剪</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="img_auto_btn">
+        <property name="text">
+         <string>自动调整</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="img_import_btn">
+        <property name="text">
+         <string>图像导入</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignRight">
+       <widget class="QLabel" name="lt_label">
+        <property name="text">
+         <string>左上角：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lt_edit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignRight">
+       <widget class="QLabel" name="rb_label">
+        <property name="text">
+         <string>右下角：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="rb_edit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="raw_img">
+        <property name="maximumSize">
+         <size>
+          <width>600</width>
+          <height>450</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>C:/Users/Never/Desktop/trimmed.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="stat_graph">
+        <property name="maximumSize">
+         <size>
+          <width>600</width>
+          <height>450</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>C:/Users/Never/Desktop/trimmed.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="h3" stretch="2,1,2,1,2,1,2,1,10,2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item alignment="Qt::AlignRight">
+       <widget class="QLabel" name="x_min_label">
+        <property name="text">
+         <string>X-max：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="x_min_edit"/>
+      </item>
+      <item alignment="Qt::AlignRight">
+       <widget class="QLabel" name="x_max_label">
+        <property name="text">
+         <string>X-max：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="x_max_edit"/>
+      </item>
+      <item alignment="Qt::AlignRight">
+       <widget class="QLabel" name="y_min_label">
+        <property name="text">
+         <string>Y-min：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="y_min_edit"/>
+      </item>
+      <item alignment="Qt::AlignRight">
+       <widget class="QLabel" name="y_max_label">
+        <property name="text">
+         <string>Y-max：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="y_max_edit"/>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="stat_legend">
+        <property name="placeholderText">
+         <string>请填写图例名称</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="h4" stretch="1,1,4,1,3,1,1">
+      <item>
+       <widget class="QPushButton" name="img_picker_btn">
+        <property name="text">
+         <string>拾色器</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="color_pre_btn">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="img_earse_btn">
+        <property name="text">
+         <string>橡皮擦</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="earse_size_slider">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="earse_size_label">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="img_pre_btn">
+        <property name="text">
+         <string>图像预览</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="h5" stretch="5,1,2,1,5">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="img_save_btn">
+        <property name="text">
+         <string>图像保存</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="save_mode"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stat_reset_btn">
+        <property name="text">
+         <string>操作重置</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
